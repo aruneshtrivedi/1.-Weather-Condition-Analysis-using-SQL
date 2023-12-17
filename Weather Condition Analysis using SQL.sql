@@ -2,7 +2,7 @@
 
 SHOW DATABASES;
 
-/*CREATE A DATABASE*//**/
+/*CREATE A DATABASE*/
 
 CREATE DATABASE STATION;
 
@@ -12,9 +12,9 @@ USE STATION;
 
 /* Q1: CREATE A TABLE “STATION ” TO STORE INFORMATION ABOUT WEATHER OBSERVATION STATIONS:
       ID          	NUMBER        PRIMARY KEY
-      CITY			CHAR(20)
-      STATE			CHAR(2)
-      LAT_N			REAL
+      CITY		CHAR(20)
+      STATE		CHAR(2)
+      LAT_N		REAL
       LONG_W		REAL*/
       
 CREATE TABLE STATION(
@@ -25,7 +25,7 @@ LAT_N REAL,
 LONG_W REAL);
 
 /*Q2: Insert the following records into the table:
-ID		CITY		STATE		LAT_N		LONG_W
+ID		CITY		STATE			LAT_N		LONG_W
 13		PHOENIX		AZ			33			112
 44		DENVER		CO			40			10
 66		CARIBOU		ME			47			68*/
@@ -44,8 +44,8 @@ SELECT * FROM STATION WHERE LAT_N >39.7;
 
 /* Q5) Create another table, ‘STATS’, to store normalized temperature and precipitation data:
 Column					Data type					Remark
-ID						Number						ID must match with some ID from the STATION
-													table(so name & location will be known).
+ID					Number						ID must match with some ID from the STATION
+											table(so name & location will be known).
 MONTH					Number						The range of months is between (1 and 12)
 TEMP_F					Number						Temperature is in Fahrenheit degrees, Ranging between (80 and 150)
 RAIN_I					Number						Rain is in inches, Ranging between (0 and 100)
@@ -60,12 +60,12 @@ PRIMARY KEY (ID, MONTH)
 );
 
 /* Q6) Populate the table STATS with some statistics for January and July:
-ID		MONTH		TEMP_F		RAIN_I
+ID		MONTH			TEMP_F		RAIN_I
 13		1			57.4		.31
 13		7			91.7		5.15
 44		1			27.3		.18
 44		7			74.8		2.11
-66		1			6.7			2.1
+66		1			6.7		2.1
 66		7			65.8		4.52*/
 
 INSERT INTO STATS VALUE (13,1,57.4,.31);
